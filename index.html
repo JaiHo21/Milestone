@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>🎉 Congratulations Sonali! 🎉</title>
+    <style>
+        /* Smooth Gradient Background */
+        body {
+            text-align: center;
+            font-family: Arial, sans-serif;
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            overflow: hidden;
+        }
+
+        /* Floating Heart Animation */
+        .heart {
+            position: absolute;
+            color: red;
+            font-size: 20px;
+            animation: floatUp 5s linear infinite;
+        }
+
+        @keyframes floatUp {
+            0% { transform: translateY(100vh) scale(0.5); opacity: 1; }
+            100% { transform: translateY(-10vh) scale(1.5); opacity: 0; }
+        }
+
+        /* Header */
+        h1 {
+            font-size: 3em;
+            color: #ff2f00;
+            text-shadow: rgb(214, 88, 66) 3px 4px 20px;
+            margin-bottom: 10px;
+        }
+
+        /* Profile Section */
+        .profile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile img {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            border: 3px solid white;
+        }
+
+        .profile a {
+            color: #ef1616;
+            text-decoration: none;
+            font-size: 1.2em;
+            margin: 10px 0;
+        }
+
+        /* Button */
+        .button {
+            margin-top: 20px;
+            padding: 12px 25px;
+            font-size: 1.2em;
+            background-color: #ff4757;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+            transition: 0.3s;
+        }
+
+        .button:hover {
+            background-color: #e84118;
+        }
+
+        /* Message Box */
+        .message-box {
+            display: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 20px;
+            border-radius: 10px;
+            width: 80%;
+            max-width: 600px;
+            margin-top: 20px;
+            font-size: 1.3em;
+            line-height: 1.5;
+            backdrop-filter: blur(10px);
+            color: rgb(232, 78, 78);
+            text-align: center;
+            font-weight: bold;
+            border: 2px solid white;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 1s ease-out, transform 0.5s ease-out;
+        }
+
+        .message-box.show {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        /* Typewriter Animation */
+        .typewriter::after {
+            content: '|';
+            display: inline-block;
+            animation: blink 0.8s infinite;
+        }
+
+        @keyframes blink {
+            50% { opacity: 0; }
+        }
+
+        /* Firecracker Effect */
+        .firework {
+            position: absolute;
+            width: 10px;
+            height: 10px;
+            background: yellow;
+            border-radius: 50%;
+            animation: explode 1s ease-out;
+        }
+
+        @keyframes explode {
+            0% { transform: scale(1); opacity: 1; }
+            100% { transform: scale(4); opacity: 0; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Floating Hearts -->
+    <script>
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerHTML = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.animationDuration = Math.random() * 3 + 2 + "s";
+            document.body.appendChild(heart);
+            setTimeout(() => heart.remove(), 5000);
+        }
+        setInterval(createHeart, 500);
+    </script>
+
+    <!-- Congratulations Message -->
+    <h1>🎉 Congratulations Sonalii !! 🎉</h1>
+
+    <!-- Profile Section -->
+    <div class="profile">
+        <img src="Profile_pic.jpeg" alt="Profile Picture">
+        <a href="https://www.instagram.com/_sonali_sutar_?igsh=MXRlc3ZyMGRtbHdvYw==" target="_blank">SONA 🦋</a>
+        <a href="https://www.instagram.com/reel/DGSG2Kqyf0g/?igsh=NWZxa25zZnRzd2Vn" target="_blank">📽️ Check it Out 🔥!</a>
+    </div>
+
+    <!-- Celebration Button -->
+    <button class="button" onclick="celebrate()">Click Here! 🎁</button>
+
+    <!-- Hidden Message Box -->
+    <div id="congrats-message" class="message-box">
+        <p class="typewriter">
+            Hey Sonali, I’m so sorry for forgetting to congratulate you on your reel hitting 1M+ views! 😅 
+            My bad! You’re not mad at me anymore, right? 😜 But seriously, huge congratulations! 🎉🔥 
+            You’re absolutely killing it, and this is just the start. 
+            Can’t wait to see you hit even bigger milestones! Keep rocking! 🚀🙌....
+        </p>
+    </div>
+
+    <script>
+        function celebrate() {
+            let messageBox = document.getElementById("congrats-message");
+
+            // Apply fade-in effect
+            messageBox.classList.add("show");
+
+            // Firecracker Effect
+            for (let i = 0; i < 30; i++) {
+                let firework = document.createElement("div");
+                firework.className = "firework";
+                document.body.appendChild(firework);
+                firework.style.left = Math.random() * window.innerWidth + "px";
+                firework.style.top = Math.random() * window.innerHeight + "px";
+                firework.style.animationDelay = Math.random() + "s";
+                setTimeout(() => firework.remove(), 1000);
+            }
+        }
+    </script>
+
+</body>
+</html>
