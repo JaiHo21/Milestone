@@ -5,17 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>🎉 Congratulations Sonali! 🎉</title>
     <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+
         /* Smooth Gradient Background */
         body {
             text-align: center;
             font-family: Arial, sans-serif;
-            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #fad0c4, #ffdde1);
+            background: linear-gradient(120deg, #ff9a9e, #fad0c4, #ffdde1);
             min-height: 100vh;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
-            overflow: hidden;
+            overflow-x: hidden;
+            padding: 20px;
         }
 
         /* Floating Heart Animation */
@@ -33,8 +39,8 @@
 
         /* Header */
         h1 {
-            font-size: 3em;
-            color: #ff2f00;
+            font-size: 2.5em;
+            color: #ff4757;
             text-shadow: rgb(214, 88, 66) 3px 4px 20px;
             margin-bottom: 10px;
         }
@@ -47,14 +53,14 @@
         }
 
         .profile img {
-            width: 120px;
-            height: 120px;
+            width: 100px;
+            height: 100px;
             border-radius: 50%;
             border: 3px solid white;
         }
 
         .profile a {
-            color: #ef1616;
+            color: #ff4757;
             text-decoration: none;
             font-size: 1.2em;
             margin: 10px 0;
@@ -83,10 +89,10 @@
             background: rgba(255, 255, 255, 0.2);
             padding: 20px;
             border-radius: 10px;
-            width: 80%;
+            width: 90%;
             max-width: 600px;
             margin-top: 20px;
-            font-size: 1.3em;
+            font-size: 1.2em;
             line-height: 1.5;
             backdrop-filter: blur(10px);
             color: rgb(232, 78, 78);
@@ -129,6 +135,28 @@
             0% { transform: scale(1); opacity: 1; }
             100% { transform: scale(4); opacity: 0; }
         }
+
+        /* Responsive Styles */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .profile img {
+                width: 80px;
+                height: 80px;
+            }
+
+            .button {
+                font-size: 1em;
+                padding: 10px 20px;
+            }
+
+            .message-box {
+                font-size: 1em;
+                padding: 15px;
+            }
+        }
     </style>
 </head>
 <body>
@@ -148,7 +176,7 @@
     </script>
 
     <!-- Congratulations Message -->
-    <h1>🎉 Congratulations Sonalii !! 🎉</h1>
+    <h1>🎉 Congratulations Sonali!! 🎉</h1>
 
     <!-- Profile Section -->
     <div class="profile">
@@ -163,10 +191,10 @@
     <!-- Hidden Message Box -->
     <div id="congrats-message" class="message-box">
         <p class="typewriter">
-            Hey Sonali, I’m so sorry for forgetting to congratulate you on your reel hitting 1M+ views! 😅 
-            My bad! You’re not mad at me anymore, right? 😜 But seriously, huge congratulations! 🎉🔥 
+            Oyee... I’m so sorry for not texting you earlier to congratulate you on your reel hitting 1M+ views! 😅 
+            My bad! But seriously, huge congratulations! 🎉🔥 
             You’re absolutely killing it, and this is just the start. 
-            Can’t wait to see you hit even bigger milestones! Keep rocking! 🚀🙌....
+            Can’t wait to see you hit even bigger milestones! Keep rocking!🚀🙌..
         </p>
     </div>
 
